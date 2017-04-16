@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build",
-    "build": "webpack -d && webpack-dev-server --content-base src/ --inline --hot",
+    "build": "webpack -d && copy src\\index.html dist\\app && webpack-dev-server --content-base src/ --inline --hot",
     "build:prod": "webpack -p && copy src/index.html"
   },
   "keywords": [
@@ -14,8 +14,11 @@
   "author": "Pratip Mondal",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.4",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-cookie": "^1.0.5",
+    "react-dom": "^15.5.4",
+    "superagent": "^3.5.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
